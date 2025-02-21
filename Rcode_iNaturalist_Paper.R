@@ -9,6 +9,7 @@ library(sjPlot)
 library(ggpubr)
 library(readxl)
 library(RColorBrewer)
+library(rcompanion)
 
 # Load all necessary input files
 # Phenotype data
@@ -722,9 +723,6 @@ AllJellyline <- ggplot(AllJellyFl, aes(x = Date, y = latitude)) +
   labs(y = element_blank()) +
   geom_line(data = highest_AllJelly, aes(group = 1), color = "blue") + 
   scale_color_manual(values = genus_colors)
-
-
-
 
 SupFig1 <- grid.arrange(CassHist, AureliaHist, JellyHist,
                         CasslineNL, Aurelialine, AllJellyline, 
